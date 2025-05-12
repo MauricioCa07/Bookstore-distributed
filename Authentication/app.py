@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from extensions import db, login_manager
-from models.user import User
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
