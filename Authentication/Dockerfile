@@ -10,8 +10,8 @@ COPY . .
 # Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expone el puerto 5000 para Flask
+# Expone el puerto 5000 para Flask (o FastAPI con Uvicorn)
 EXPOSE 5000
 
-# Comando para correr la app
+# Comando para iniciar la app con recarga automática
 CMD ["python", "app.py"]

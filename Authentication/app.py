@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from extensions import db, login_manager
 import config 
+from models.user import User
 
 app = Flask(__name__)
 app.config.from_object(config)
