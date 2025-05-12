@@ -1,10 +1,9 @@
 from flask import Flask, render_template
 from extensions import db, login_manager
-
+import config 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secretkey'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bookstore.db'
+app.config.from_object(config)
 
 db.init_app(app)
 login_manager.init_app(app)
@@ -22,6 +21,9 @@ from controllers.admin_controller import admin
 app.register_blueprint(auth)
 app.register_blueprint(admin)
 
+@app.route('/')
+def home():
+    return render_template('home.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
