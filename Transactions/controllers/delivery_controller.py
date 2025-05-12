@@ -18,5 +18,5 @@ def select_delivery(purchase_id):
         db.session.add(new_assignment)
         db.session.commit()
         
-        return redirect(url_for('book.catalog'))
+        return redirect("http://localhost:5001/book/catalog")
     return render_template('delivery_options.html', providers=providers, purchase_id=purchase_id)

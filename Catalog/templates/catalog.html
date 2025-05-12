@@ -14,7 +14,7 @@
             <p class="card-text"></p>
               <strong>Unidades disponibles:</strong> {{ book.stock }}
             </p>
-            <form method="POST" action="{{ url_for('purchase.buy', book_id=book.id) }}">
+            <form method="POST" action="http://localhost:5002/buy/{{ book.id }}">
               <input type="hidden" name="price" value="{{ book.price }}">
               <input type="number" name="quantity" class="form-control mb-2" value="1" min="1">
               <button type="submit" class="btn btn-primary">Buy</button>
