@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  transaction-service:
+    build:
+      context: ./
+    container_name: transaction-service
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./:/app
+    networks:
+      - backend
+
+networks:
+  backend:

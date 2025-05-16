@@ -14,7 +14,7 @@
             <p class="card-text"></p>
               <strong>Unidades disponibles:</strong> {{ book.stock }}
             </p>
-            <form method="POST" action="http://54.234.57.47:5002/buy/{{ book.id }}">
+            <form method="POST" action="http://54.163.190.193:5000/buy/{{ book.id }}">
               <input type="hidden" name="price" value="{{ book.price }}">
               <input type="number" name="quantity" class="form-control mb-2" value="1" min="1">
               <button type="submit" class="btn btn-primary">Buy</button>

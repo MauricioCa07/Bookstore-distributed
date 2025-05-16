@@ -14,7 +14,7 @@ def login():
         user = User.query.filter_by(email=email).first()
         if user and check_password_hash(user.password, password):
             login_user(user)
-            return redirect("http://54.234.57.47:5001/book/catalog")
+            return redirect("http://44.204.73.214:5000/book/catalog")
         else:
             flash('Login failed')
     return render_template('login.html')

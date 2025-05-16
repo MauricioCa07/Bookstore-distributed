@@ -3,7 +3,7 @@
 <div class="container mt-5">
   <h2 class="mb-4">Seleccionar Proveedor de Entrega</h2>
 
-  <form method="POST" action="http://54.234.57.47:5002/delivery/{{ purchase_id }}">
+  <form method="POST" action="http://54.163.190.193:5000/delivery/{{ purchase_id }}">
       <div class="mb-3">
           <select name="provider" class="form-select" required>
               {% for provider in providers %}
@@ -17,7 +17,7 @@
   </form>
 
   <div class="mt-3">
-      <a href="http://54.234.57.47:5001/book/my_books" class="btn btn-secondary">Cancelar y Volver al Catálogo</a>
+      <a href="http://44.204.73.214:5000/book/my_books" class="btn btn-secondary">Cancelar y Volver al Catálogo</a>
   </div>
 </div>
 {% endblock %}
