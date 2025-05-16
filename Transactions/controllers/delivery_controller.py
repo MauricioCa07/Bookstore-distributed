@@ -18,5 +18,5 @@ def select_delivery(purchase_id):
         db.session.add(new_assignment)
         db.session.commit()
         
-        return redirect("http://54.234.57.47:5001/book/catalog")
+        return redirect("http://3.86.182.255:5001/book/catalog")
     return render_template('delivery_options.html', providers=providers, purchase_id=purchase_id)
